@@ -1,5 +1,13 @@
-import '@/styles/globals.css'
+import { useEffect, useState } from 'react';
+import { Layout } from '../components';
+import 'tailwindcss/tailwind.css';
+import '@/styles/global.scss';
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function App({ Component, pageProps }) {
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }
+export default App;
